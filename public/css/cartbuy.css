@@ -1,0 +1,435 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+div, h1, h2, h3, h4, h5, li, ol, p, ul {
+    list-style: none;
+}
+body{
+    color: #051b28;
+    height: 100vh;
+    font-size: 14px;
+    background: #f5f5f5;
+}
+
+.row{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+
+.cartbuy .item-box, .cartbuy .cart-header {
+    border-bottom: .01333rem solid #e7e7e7;
+}
+
+
+/* 头部 */
+.cart-header{
+    width: 100%;
+    height: 12vw;
+    background: #FFF;
+    display: flex;
+    font-size: 5vw;
+}
+/* 返回按钮 */
+.back{
+    width: 33%; 
+    height: 100%;
+    background: url('../images/icom_left.png') no-repeat 2vw 2vw;
+    background-size: 3vw;
+    margin-top: 1.2vw;
+}
+.back>p{
+    width: 10vw;
+    height: 100%;
+}
+
+/* 标题 */
+.title{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    line-height: 12vw;
+}
+
+/* 所有商品 */
+.allItem{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    margin-bottom: 110px;
+    padding: 0 12px;
+}
+/* 每个商品的详细信息 */
+.item-box{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin-top: 3vw;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+/* 店铺信息 */
+.shop{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    /* position: relative; */
+    /* background: #FF5000; */
+}
+.shop>div{
+    display: inline-block;
+}
+/* 勾选框 */
+.shop-check{
+    /* width: 10%; */
+    height: 100%;
+    /* text-align: center; */
+    /* background: url('../images/icom_check.png') no-repeat; */
+    width: 6%;
+}
+
+/* icom图 */
+.shop-icom{
+    width: 6%;
+    height: 100%;
+    margin-left: 5px;
+}
+.shop-icom img{
+    width: 100%;
+}
+/* 店铺名 */
+.shop-name{
+    width: 50%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 10vw; 
+}
+.shop-name span:nth-child(2){
+    color: #999999;
+    font-size: 12px;
+}
+/* 其他 */
+.shop .shop-other{
+    width: 30%;
+    height: 100%;
+    float: right;
+}
+.shop-other>ul{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.shop-other>ul>li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    line-height: 10vw;
+    /* font-size: 34px; */
+    color: #898989;
+}
+
+
+/* 商品信息 */
+.goods-content{
+    width: 100%;
+    height: 100%;
+    /* padding-left: 0; */
+    display: flex;
+}
+/* 商品单选框 */
+.goods-check{
+    width: 10%;
+    height: 10vw;
+}
+/* 商品详情 */
+.goods-detail{
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+/* 图片 */
+.goods-img{
+    background-color: inherit;
+    width: 35%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vw;
+    /* background: olivedrab; */
+    border-radius: 1.5vw;
+}
+.goods-img a{
+    display: block;
+    /* height: 100%; */
+    text-align: center;
+    overflow: hidden;
+    padding: 2vw;
+}
+.goods-img a img{
+    width: 100%;
+    height: 100%;
+}
+/* 商品其他信息 */
+.goods-info{
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: white;
+    /* background: seagreen;s */
+    margin-left: 10px;
+}
+.goods-info a{
+    text-decoration: none;
+}
+.goods-title{
+    word-break: break-all;
+    font-size: 14px;
+    display: -webkit-box;             /*将对象转为弹性盒模型展示*/
+    -webkit-box-orient: vertical;     /*设置弹性盒模型子元素的排列方式*/
+    -webkit-line-clamp: 2;            /*限制文本行数*/
+    overflow: hidden;                 /*超出隐藏*/
+    margin: 10px 0 10px;
+}
+/* 尺码 */
+.goods-size{
+    background: #f5f5f5;
+    width: 70%;
+    border-radius: 5px;
+    color: #898989;
+    padding-left: 2vw;
+    margin-top: 3.5vw;
+    margin-bottom: 5vw;
+    overflow: hidden;
+}
+.goods-size>p{
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    /* padding-left: 2vw; */
+}
+.goods-size span{
+    float: right;
+    right: 2vw;
+    top: 1vw;
+}
+.goods-size .glyphicon {
+    font-size: 14px;
+}
+
+/* 价格 */
+.price-box{
+    display: flex;
+    width: 100%;
+    /* height:; */
+    -webkit-box-align: center;
+    align-items: center;
+}
+.goods-price{
+    width: 50%;
+    height: 100%;
+    color: #f60;
+    /* display: inline; */
+    font-size: 5vw;
+   
+}
+.goods-price p{
+    margin: 0;
+}
+
+.goods-num{
+    width: 50%;
+    position: relative;
+    float: right;
+    right: 0;
+    border: 0.5px solid #898989;
+    border-radius: 5px;
+}
+.goods-num p{
+    margin: 0;
+}
+#btn1,#btn2{
+    width: 20%;
+    height: 5vw;
+    border: none ;
+	border-style: none ;
+	text-shadow: none ;
+    background: none; 
+    color: #898989; 
+}
+#ipt3{
+    /* margin: 0 1vw 0; */
+    width: 48%;
+    height: 5vw;
+    border: none;
+    text-align: center;
+    font-size: 5vw;
+	border-style: none ;
+	text-shadow: none ;
+    background: none; 
+    text-align: center;
+    margin-top: 1vw;
+}
+
+/* 所有的bottom按钮 */
+.shop-check .ipt,.goods-content .ipt,.settlement-bar .ipt{
+    width: 100%;
+    height: 4vw;
+    margin: 0px;
+}
+
+.btn-icom{
+    width: 100%;
+    height: 5vw;
+    padding-left: 8vw;
+    background: url('../images/icom_check.png') no-repeat;
+    background-size: 5vw;
+    font-size: 4vw;
+    display: block;
+    color: #898989;
+    margin-top: 10vw;
+}
+.select-all {
+    /* display: inline-block; */
+    margin-bottom: 5px;
+    font-weight:100;
+}
+.select-all .btn-icom2{
+    background: url('../images/icom_check2.png') no-repeat;
+    background-size: 5vw;
+}
+#allsel{
+    margin-top: 8px;
+}
+/* 结算框 */
+.settlement-bar {
+    position: fixed;
+    bottom: 43px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 12px;
+    background-color: #FFFFFF;
+    height: 54px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.submit-wrapper{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 60%;
+}
+.settlement-bar .submit-wrapper .price-wrapper {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #333333;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.settlement-bar .submit-wrapper .price-wrapper .post-price {
+    font-size: 14px;
+}
+.settlement-bar .submit-wrapper .price-wrapper .price {
+    color: #FF5000;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+}
+.settlement-bar .submit-wrapper .submit {
+    background-image: -webkit-linear-gradient(left, #FF9000 0%, #FF5000 98%);
+    background-image: linear-gradient(90deg, #FF9000 0%, #FF5000 98%);
+    font-size: 15px;
+    line-height: 15px;
+    padding: 8px 18px;
+    text-align: center;
+    border-radius: 80px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* 底部导航 */
+.tbdh{
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 43px;
+    z-index: 1001;
+    background-color: #fff;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 0 20px;
+    padding-top: 2px;
+    box-sizing: border-box;
+}
+.tbdh a{
+    text-decoration: none;
+    display: block;
+    color: #5d656b;
+    text-align: center;
+}
+
+.tbdh a:nth-child(5){
+    position: absolute;
+    right: 20px;
+}
+.tbdh a:nth-child(2){
+   position: absolute;
+   left: 23.5vw;
+}
+.tbdh a:nth-child(3){
+    position: absolute;
+    left: 46vw;
+}
+.tbdh a:nth-child(4){
+    position: absolute;
+    left: 70vw;
+}
+.glyphicon{
+    font-size: 20px;
+    text-align: center;
+}
+.glyphicon p{
+    padding-top: 2px;
+    font-size: 12px;
+    margin: 0;
+}

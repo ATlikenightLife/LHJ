@@ -1,0 +1,456 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.row{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+[class *= "col-tl"]{
+    float: left;
+}
+[class *= "col-xt"]{
+    float: left;
+}
+.col-xt1{
+    width: 8.33%;
+}
+.col-xt2{
+    width: 16.66%;
+}
+.col-xt3{
+    width: 25%;
+}
+.col-xt4{
+    width: 33.33%;
+}
+.col-xt5{
+    width: 41.66%;
+}
+.col-xt6{
+    width: 50%;
+}
+.col-xt7{
+    width: 58.33%;
+}
+.col-xt8{
+    width: 66.66%;
+}
+.col-xt9{
+    width: 75%;
+}
+.col-xt10{
+    width: 83.33%;
+}
+.col-xt11{
+    width: 91.66%;
+}
+.col-xt12{
+    width: 100%;
+}
+.col-tl1{
+    width: 10%;
+}
+.col-tl2{
+    width: 20%;
+}
+.col-tl3{
+    width: 30%;
+}
+.col-tl4{
+    width: 40%;
+}
+.col-tl5{
+    width: 50%;
+}
+.col-tl6{
+    width: 60%;
+}
+.col-tl7{
+    width: 70%;
+}
+.col-tl8{
+    width: 80%;
+}
+.col-tl9{
+    width: 90%;
+}
+.col-tl10{
+    width: 100%;
+}
+.shop-main{
+    position: relative;
+    overflow: hidden;
+    /* width: 100%; */
+    /* height: 100%; */
+    color: #3d4245;
+}
+.toolbar{
+    /* width: 100%;
+    height: 85px; */
+}
+.top-bar{
+    width: 100%;
+    background: #f6f6f6;
+    position: relative;
+}
+.top-bar-w{
+    /* display: -webkit-box; */
+    display: flex;
+    widows: 100%;
+    height: 45px;
+    color: #212121;
+    line-height: 45px;
+    padding: 6px 0;
+    position: relative;
+    border-bottom: 1px solid #dbdbdb;
+}
+.top-bar-le{
+    flex: 1;
+    /* height: 32px; */
+    /* -webkit-box-flex: 1; */
+    margin: 0 8px;
+}
+.top-bar-rg{
+    display: block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    margin-top: -6px;
+}
+.icon-home{
+    margin: 10px 0 0 5px;
+    width: 23px;
+    height: 21px;
+    background: url('./images/icons.png') no-repeat -3px -137px;
+}
+.s-input{
+    /* display: -webkit-box; */
+    display: flex;
+    height: 32px;
+    background: #e3e3e5;
+    border-radius: 4px;
+    /* float: left; */
+}
+.s-input-tab{
+    display: inline-block;
+    position: relative;
+    /* top: -4px; */
+}
+.s-input-tab-txt{
+    width: 56px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 10px;
+    color: #999;
+    font-size: 14px;
+    /* position: relative;
+    top: -4px; */
+}
+.s-input-tab-txt:after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 3px;
+    background: url('./images/下载\ \(1\).png') no-repeat;
+    background-size: 6px 3px;
+    top: 13px;
+    right: 8px;
+}
+.s-input-frame{
+    flex: 1;
+    /* -webkit-box-flex: 1; */
+    width: 100%;
+    padding-right: 10px;
+    line-height: 32px;
+}
+.s-input-form{
+    position: relative;
+    /* display: -webkit-box; */
+    display: flex;
+}
+.s-form-search{
+    flex: 1;
+    /* -webkit-box-flex: 1; */
+}
+.s-input-form button{
+    top: 1px;
+    right: 20px;
+    width: 44px;
+    height: 30px;
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    /* display: none; */
+}
+.s-input-form button span{
+    margin: 0 auto;
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.top-search{
+    border: none;
+    background: none;
+    width: 100%;
+    height: 26px;
+    font-size: 14px;
+}
+.s-form-btn{
+    width: 30px;
+    height: 30px;
+    margin-right: -10px;
+}
+.search-btn{
+   
+    width: 18px;
+    height: 18px;
+    background-image: url('./images/icons.png');
+    background-position: -3px -372px;
+    display: block;
+    border: none;
+    text-indent: -999px;
+    position: relative;
+    top: 7px;
+    background-color: transparent;
+}
+/* 筛选 */
+.bottom-bar{
+    /* width: 100%; */
+    /* height: 40px; */
+}
+.bottom-bar-warp{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.bottom-swtich{
+    position: relative;
+    width: 50px;
+    height: 39px;
+    text-align: left;
+    border-left: 1px solid #dbdbdb;
+    margin-left: -1px;
+    float: right;
+}
+.bottom-icons{
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: 10px;
+    background-image: url('./images/icons.png');
+    background-position: -3px -296px;
+    width: 20px;
+    height: 20px;
+}
+ul,li{
+    list-style: none;
+}
+.bottom-nav{
+    padding-right: 50px;
+    margin: 0;
+}
+.bottom-nav .list1{
+    width: 37%;
+    color: #f50;
+}
+.arrow{
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    margin-left: 4px;
+    width: 6px;
+    height: 3px;
+    background-repeat: no-repeat;
+    background-image: url('./images/xz2.png');
+    background-size: 6px 3px;
+}
+.line-bar{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    height: 20px;
+    width: 1px;
+    background: #ccc;
+    overflow: hidden;
+}
+.bottom-nav li{
+    position: relative;
+    color: #999;
+    color: #3d4245;
+    width: 30%;
+    display: inline-block;
+    height: 39px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 39px;
+    position: relative;
+}
+.droplist{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    right: 0;
+    z-index: 2;
+    white-space: nowrap;
+    background: #fff;
+    line-height: 39px;
+    border-bottom: 1px solid #c8c7cc;
+    z-index: 1000;
+    display: none;
+}
+.list2{
+    margin-left:8%;
+    margin-bottom: 0;
+}
+.list2 .list2-dot{
+    color: #f50;
+}
+.list2 li{
+    position: relative;
+    border-bottom: solid 1px #c8c7cc;
+}
+.list2-icons{
+    width: 13px;
+    height: 8px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background-image: url('./images/icons@2x.png');
+    background-position: -3px -438px;
+    background-size: 106px 543px;
+}
+.icons-bottom{
+    display: inline-block;
+    vertical-align: middle;
+    background: url('./images/icons.png') no-repeat -3px -418px;
+    width: 13px;
+    height: 14px;
+}
+
+/* 主要内容 */
+.main-cont{
+    width: 100%;
+    position: relative;
+    /* top: -10px; */
+}
+.search-content{
+    background: #f9f9f9;
+}
+.search-container{
+    overflow: hidden;
+}
+.loading{
+    margin: 0;
+}
+.search-container>li{
+    height: 129px;
+    padding: 12px 6px;
+    border-bottom: 1px solid #dbdbdb;
+    position: relative;
+}
+.search-container>li .list-p{
+    display: inline-block;
+    text-align: center;
+    /* overflow: hidden; */
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 0 8px;
+}
+.search-container>li .list-p a{
+    line-height: 79px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.list-item{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+}
+.search-container>li .item-flag{
+    width: 20px;
+    height: 20px;
+    background: url('./images/xz3.png') no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.search-container>li .list-d{
+    width: 100%;
+    margin: 4px 15px 6px 0;
+}
+.search-container>li .list-p a img{
+    width: 100px;
+    height: 100px;
+}
+.search-container>li .list-d a{
+    text-decoration: none;
+}
+.search-container>li .d-title{
+    margin: 0;
+    line-height: 22px;
+    margin-bottom: 3px;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .7);
+    word-break:break-all;
+    font-size: 14px;
+    height: 44px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.search-container>li .d-price{
+    line-height: 24px;
+    color: #999;
+    margin: 0;
+}
+.search-container>li .d-price em{
+    color: #eb5211;
+    font-size: 16px;
+    font-style: normal;
+}
+.search-container>li .list-d .list-d-main{
+    display: flex;
+    margin-top: -1px;
+    height: 20px;
+    overflow: hidden;
+    flex-flow: row wrap;
+    place-content: flex-start space-between;
+    flex-shrink: 0;
+    align-items: center;
+}
+.search-container>li .list-d .list-d-main p{
+    font-size: 12px;
+    color: rgba(0, 0, 0, .4);
+    line-height: 20px;
+}
+.icons-group{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    line-height: 16px;
+    height: 16px;
+}
+.item-icons-ju{
+    background-color: #d51938;
+    font-size: 12px;
+    padding: 0 3px;
+}

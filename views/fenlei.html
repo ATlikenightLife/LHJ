@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/fenlei.css">
+    <script src="js/fenlei.js"></script>
+    <title>商品分类</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="row main-left">
+            <div class="main-left-warp">
+                <ul class="">
+                    {{#each data}}
+                    <li role="presentation" class="dot" data-id="{{id}}"><span class="left-icon" style="display: block"></span><a href="#">{{name}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>  
+        </div>
+        <div class="row main-right">
+            <!-- 为你推荐 -->
+            <div class="row nav-content" style="display:block;">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

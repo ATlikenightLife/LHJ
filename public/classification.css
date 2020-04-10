@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+[class*="col-xs"]{
+    padding: 0;
+    margin: 0;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    /* background: black; */
+}
+.all_top{
+    height: 45px;
+    background: #eeeeee;
+    border: 1px solid #aaaaaa;
+    overflow: hidden;
+    z-index: 10;
+}
+.all_titl{
+    text-align: center;
+    padding: 12px;
+}
+.all_titl h1{
+    font-size: 16px;
+}
+.all_box{
+    position: absolute;
+    top: 44px;
+    bottom: 0px;
+    /* background: black; */
+}
+.all_name{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.all_name ul{
+    /* background:  */
+    /* background: #eeeeee; */
+    margin:0;
+}
+.all_name li{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 2vw 20px 2vw;
+    background: #eeeeee;
+    color: #aaaaaa;
+}
+
+.all_article{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 15px;
+}
+.all_produ a{
+    color: black;
+    padding: 15px;
+}
+
+
+.all_produ a p{
+    text-align: center;
+}
+
+.all_name .acti{
+    background: white;
+    color: black;
+}
+
+.go_interval{
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    display: none;
+}
+.go_interval a{
+    padding: 8px;
+    background: rgb(199, 0, 0);
+    color: white;
+}
+
+.posi_box{
+    /* width: 100%; */
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 2vw 20px 2vw;
+    background: #ffffff;
+    color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    /* bottom: 0; */
+    z-index: 2;
+    display: none;
+    
+}
+

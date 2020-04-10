@@ -1,0 +1,144 @@
+.top_logo{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-left: -40px;
+    /* border-radius: 50%;
+    overflow: hidden; */
+}
+
+input[type='file'] {
+    border: 0px;
+    outline: none;
+    display: none;
+
+}
+
+.top_logo p{
+    text-align: center;
+    color: #aaaaaa;
+}
+
+
+input{
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+
+
+.box{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    /* margin-top: 250px; */
+    
+}
+
+
+.iput_box{
+    width: 80%;
+    border-bottom: 1px solid orangered;
+    font-size: 16px;
+    margin: 20px auto;
+}
+
+.iput_box span{
+    width: 10%;
+    padding: 5px;
+    float: right;
+    color: rgb(10, 231, 10);
+    display: none;
+}
+
+
+
+.radio-inline input[type=radio]{
+    margin-left: -25px;
+}
+
+.but_muen{
+    margin: 0 auto;
+    width: 80%;
+    font-size: 20px;
+    /* padding: 10px; */
+
+}
+.but_muen input{
+    color: white;
+    background: linear-gradient(-125deg,#ff3300,rgb(255, 153, 0));
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.no_border{
+    border: none;
+}
+
+
+
+
+/* 错误提示框 */
+
+.error_box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.356);
+    top: 0;
+    display: none;
+}
+.box_frame{
+    width: 70%;
+    /* border: 2px solid rgba(0, 0, 0, 0.356); */
+    margin: 50% auto;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.box_frame h3{
+    padding:10px;
+    color: rgb(182, 182, 182);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.box_frame .btn-default{
+    /* font-size: 40px; */
+    /* margin: 20px; */
+    color: #00a2ff;
+    width: 100%;
+    border: none;
+    border-top:1px solid #aaaaaa2f;
+    margin-bottom: 10px;
+}
+
+
+/* ********************************** */
+.btn_sele{
+    /* font-size: 35px; */
+    margin-bottom: 10px;
+}
+.btn_sele .dropdown-menu{
+    /* font-size: 35px; */
+    height: 300px;
+    overflow:scroll;
+}
+
+
+/* 返回按钮 */
+.return_login{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    /* border-radius: 50%; */
+    background: none;
+    font-size: 15px;
+    color: orange;
+    /* box-shadow: -3px 5px 15px rgba(0, 0, 0, 0.192); */
+}

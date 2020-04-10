@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单列表</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+    <!-- bs的js组件依赖于jq，所以我们要先引入jq -->
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/Theorderlist.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="theHead">
+        <ul class="tab">
+            <li class="btna">全部</li>
+            <li>待付款</li>
+            <li>待发货</li>
+            <li>待收货</li>
+            <li>待评价</li>
+        </ul>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="theSearch">
+        <div class="glyphicon glyphicon-search gly">
+            <input type="text" placeholder="搜索全部订单">
+        </div>
+        <div class="theSearch_a">
+            <span>搜索</span>
+        </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="box">
+        <!-- 全部 -->
+        <div class="themainbody">
+            {{#each data}}
+            <div class="orderInformation">
+                <div class="orderInformation_a">
+                    <img src="/images/1.png" width="100%" alt="">
+                    <span>{{merchant}}</span>
+                    <span style="color: rgb(255, 80, 0);float: right;">卖家已发货</span>
+                </div>
+                <div class="orderInformation_b" data-id="{{id}}">
+                    <div class="shangpinImg">
+                        <img src="/shop_img/{{picname}}" width="100%" alt="">
+                    </div>
+                    <div class="shangpinXin">
+                        <p style="color: rgba(5,27,40,1);" class="shangpinXin_a">{{name}}</p>
+                        <p>{{colorsize}}</p>
+                    </div>
+                    <div class="shangpinJiage">
+                        <span>￥{{price}}</span>
+                        <span style="color: #999999;font-size: 12px;">x{{num}}</span>
+                    </div>
+                </div>
+                <div class="orderInformation_c">
+                    <span style="color: #999999">共{{num}}件商品</span>
+                    <span>合计:￥{{total}}</span>
+                </div>
+                <div class="more">
+                    <span>延长收货</span>
+                    <span>查看物流</span>
+                    <span id="btns">确认收货</span>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <!-- 待付款 -->
+        <div class="themainbody">
+            <div class="orderInformation">
+                <div class="orderInformation_a">
+                    <img src="/images/1.png" width="100%" alt="">
+                    <span>钱夫人旗舰店</span>
+                    <span style="color: rgb(255, 80, 0);float: right;">等待买家付款</span>
+                </div>
+                <div class="orderInformation_b">
+                    <div class="shangpinImg">
+                        <img src="/images/5.jpg" width="100%" alt="">
+                    </div>
+                    <div class="shangpinXin">
+                        <p style="color: rgba(5,27,40,1);" class="shangpinXin_a">【双11零点上新
+                            抢先加购】毛衣套装&mdash;&mdash;是你出门不费力的选择</p>
+                        <p>白色套装;S</p>
+                    </div>
+                    <div class="shangpinJiage">
+                        <span>￥138.00</span>
+                        <span style="color: #999999;font-size: 12px;">x1</span>
+                    </div>
+                </div>
+                <div class="orderInformation_c">
+                    <span style="color: #999999">共6件商品</span>
+                    <span>合计:￥138.00</span>
+                </div>
+                <div class="more">
+                    <span>修改地址</span>
+                    <span>取消订单</span>
+                    <span id="btns">付款</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 待发货 -->
+        <div class="themainbody"></div>
+
+        <!-- 待收货 -->
+        <div class="themainbody">
+            <div class="orderInformation">
+                <div class="orderInformation_a">
+                    <img src="/images/1.png" width="100%" alt="">
+                    <span>钱夫人旗舰店</span>
+                    <span style="color: rgb(255, 80, 0);float: right;">卖家已发货</span>
+                </div>
+                <div class="orderInformation_b">
+                    <div class="shangpinImg">
+                        <img src="/images/5.jpg" width="100%" alt="">
+                    </div>
+                    <div class="shangpinXin">
+                        <p style="color: rgba(5,27,40,1);" class="shangpinXin_a">【双11零点上新
+                            抢先加购】毛衣套装&mdash;&mdash;是你出门不费力的选择</p>
+                        <p>白色套装;S</p>
+                    </div>
+                    <div class="shangpinJiage">
+                        <span>￥138.00</span>
+                        <span style="color: #999999;font-size: 12px;">x1</span>
+                    </div>
+                </div>
+                <div class="orderInformation_c">
+                    <span style="color: #999999">共6件商品</span>
+                    <span>合计:￥138.00</span>
+                </div>
+                <div class="more">
+                    <span>延长收货</span>
+                    <span>查看物流</span>
+                    <span id="btns">确认收货</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 待评价 -->
+        <div class="themainbody">
+            <div class="orderInformation">
+                <div class="orderInformation_a">
+                    <img src="/images/1.png" width="100%" alt="">
+                    <span>钱夫人旗舰店</span>
+                    <span style="color: rgb(255, 80, 0);float: right;">交易成功</span>
+                </div>
+                <div class="orderInformation_b">
+                    <div class="shangpinImg">
+                        <img src="/images/5.jpg" width="100%" alt="">
+                    </div>
+                    <div class="shangpinXin">
+                        <p style="color: rgba(5,27,40,1);" class="shangpinXin_a">【双11零点上新
+                            抢先加购】毛衣套装&mdash;&mdash;是你出门不费力的选择</p>
+                        <p>白色套装;S</p>
+                    </div>
+                    <div class="shangpinJiage">
+                        <span>￥138.00</span>
+                        <span style="color: #999999;font-size: 12px;">x1</span>
+                    </div>
+                </div>
+                <div class="orderInformation_c">
+                    <span style="color: #999999">共6件商品</span>
+                    <span>合计:￥138.00</span>
+                </div>
+                <div class="more">
+                    <span>查看物流</span>
+                    <span>卖了换钱</span>
+                    <span id="btns">评价</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 没订单时显示 -->
+    <div class="noOrder">
+        <img src="/images/3.png" width="100%" alt="">
+        <div>您还没有相关的订单</div>
+        <div>可以去看看有哪些想买的</div>
+        <div class="suibian">
+            <span>随便逛逛</span>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="theTail ">
+        <span class="theTail_a index">
+            <span class="glyphicon glyphicon-home"></span>
+            <span>首页</span>
+        </span>
+        <span class="theTail_a">
+            <span class="glyphicon glyphicon-shopping-cart shop_car"></span>
+            <span>购物车</span>
+        </span>
+        <span class="theTail_a Theorderlist" style="color:rgb(255, 145, 0);">
+            <span class="glyphicon glyphicon-list-alt"></span>
+            <span>订单列表</span>
+        </span>
+        <span class="theTail_a my_taobao">
+            <span class="glyphicon glyphicon-user" ></span>
+            <span>我的淘宝</span>
+        </span>
+        <span class="theTail_a">
+            <span class="glyphicon glyphicon-option-horizontal"></span>
+            <span>更多</span>
+        </span>
+    </div>
+</body>
+<script>
+
+    var loca_login = localStorage['id'];
+    if (loca_login) {
+        $.ajax({
+            type: 'GET',
+            url: '/varification/' + loca_login,
+            // dataType:'json',
+            success: function (json) {
+                // console.log(json);
+                if (!json.sta) {
+                    window.location = '/userlogin';
+                }
+            }
+        });
+    } else {
+        window.location = '/userlogin';
+    }
+
+
+    $(document).ready(function () {
+        $('.themainbody:gt(0)').hide();//选择themainbody类0之后的元素隐藏,为0的这个元素显示
+        $('.tab li').unbind('click').click(function () {
+            var ind = $(this).index();//获取点击元素的下标
+            $(this).addClass('btna').siblings().removeClass(); //给点击的元素添加类、相邻元素隐藏类
+            $('.themainbody').eq(ind).show().siblings().hide();//选择item元素中第ind个显示出来，相邻元素被隐藏
+        })
+
+
+        $('.orderInformation_b').click(function () {
+            var id = $(this).attr('data-id');
+            console.log(id);
+            window.location = '/xiangqing/' + id;
+
+        })
+
+        // $('.noOrder').hide();
+        // var node=$('.themainbody');
+        // if(node == null){
+        //     $('.noOrder').show();　
+        // }
+
+    });
+    $('.my_taobao').click(function(){   
+        window.location.href = '/UserIndex';
+    });
+    $('.index').click(function(){   
+        window.location.href = '/index';
+    });
+    $('.Theorderlist').click(function(){   
+        window.location.href = '/Theorderlist/'+loca_login;
+    });
+    $('.shop_car').click(function(){   
+        window.location.href = '/cartbuy/'+loca_login;
+    });
+</script>
+
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单表</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #dddddd91;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .box {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .center_box {
+            background: white;
+            border-radius: 15px;
+        }
+
+        .center_box>p {
+            width: 10%;
+            float: left;
+            margin: 30px 15px 30px 15px;
+            /* padding: 10px; */
+            /* background: red; */
+        }
+
+        .add_text {
+            float: left;
+            padding: 5px;
+            width: 65%;
+        }
+
+        .add_text :nth-child(1) {
+            font-size: 5vw;
+            font-family: '黑体';
+            margin: 5px 0px;
+            font-weight: 500;
+        }
+
+        .add_text :nth-child(1) span {
+            font-size: 13px;
+            color: #969696;
+            margin-left: 5px;
+            /* font-family: '宋体'; */
+        }
+
+        .add_text :nth-child(2) {
+            font-size: 3vw;
+            margin: 10px 0px 10px 0px;
+            font-family: '宋体';
+        }
+
+        .add_text :nth-child(3) {
+            font-size: 2vw;
+            color: orangered;
+            font-family: '宋体';
+        }
+
+        .modify {
+            width: 15%;
+            float: right;
+            padding: 10vw 2vw;
+            border-left: 1px solid #ff7b0044;
+            color: rgb(255, 94, 0);
+        }
+
+
+        /* 主体部分 */
+        .main_center {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mer_name {
+            padding-left: 15px;
+            padding-top: 10px;
+            font-size: 4vw;
+        }
+
+        .shop_text {
+            padding: 15px;
+        }
+
+        .shop_text>p {
+            width: 25%;
+
+            float: left;
+        }
+
+        .text_orders {
+            list-style: none;
+            float: left;
+            width: 60%;
+            padding-left: 10px;
+            /* font-family: '宋体'; */
+            font-size: 3.5vw;
+        }
+
+        .text_orders li {
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+            word-wrap: break-word;
+            margin: 2px;
+        }
+
+
+        .text_orders :nth-child(2) {
+            font-size: 5px;
+            background: #cccccc9a;
+            color: rgba(109, 109, 109, 0.76);
+        }
+
+        .text_orders :nth-child(4) span {
+            font-size: 5px;
+            background: #ff8a2a1a;
+            color: rgb(238, 80, 17);
+        }
+
+
+        .delivery {
+            width: 100%;
+            padding: 5px 15px;
+        }
+
+        .delivery :nth-child(1) {
+            display: inline-block;
+            width: 25%;
+            text-align: right;
+            /* padding: 5px; */
+            font-size: 3.5vw;
+        }
+
+        .delivery :nth-child(2) {
+            display: inline-block;
+            width: 50%;
+            text-align: left;
+            /* padding: 5px; */
+            font-size: 3.5px;
+            color: #aaaaaa;
+        }
+
+        .delivery :nth-child(3) {
+            display: inline-block;
+            width: 20%;
+            text-align: left;
+            /* padding: 5px; */
+            font-size: 3.5vw;
+            color: black;
+        }
+
+        .money {
+            font-size: 3.5vw;
+            padding: 15px 30px;
+            text-align: right;
+        }
+
+        .money :nth-child(1) {
+            font-size: 10px;
+            color: #aaaaaa;
+        }
+
+        .money :nth-child(2) {
+            font-size: 3.5vw;
+            color: #fca80b;
+        }
+
+        .bottom_box {
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            background: white;
+            text-align: right;
+        }
+
+        .bottom_box p :nth-child(1) {
+            font-size: 3.5vw;
+            color: #aaaaaa;
+            margin: 0px 5px;
+        }
+
+        .bottom_box p :nth-child(2) {
+            font-size: 4.5vw;
+            color: #fc570b;
+            font-weight: 500;
+            /* margin: 0px 5px; */
+        }
+
+        .bottom_box p :nth-child(3) {
+            font-size: 4.5vw;
+            color: white;
+            font-weight: 500;
+            padding: 18px;
+            background: linear-gradient(120deg, rgb(255, 153, 0), rgb(255, 60, 0));
+        }
+
+        /* 弹框 */
+
+        .box_modify {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: none;
+
+        }
+
+        .modify_center {
+            margin: 200px auto;
+            width: 70%;
+            background: white;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+
+        }
+
+        .modify_center h3 {
+            text-align: center;
+            font-size: 4.5vw;
+            font-weight: 500;
+            color: #f78113;
+
+        }
+
+        .modify_center span {
+            width: 20px;
+            height: 20px;
+            /* padding: 10px; */
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+        }
+
+        .modify_center div {
+            padding: 20px 0px 0px 0px;
+            color: #f78113;
+            border-bottom: 1px solid #aaaaaa;
+        }
+
+        .modify_center .save_modify {
+            border: none;
+        }
+
+        .modify_center .save_modify input {
+            width: 100%;
+            padding: 10px 0px;
+            border-radius: 5px;
+            background: #f78113;
+            color: white;
+        }
+
+        /* 错误提示框 */
+        .error_box {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.356);
+            top: 0;
+            display: none;
+        }
+
+        .box_frame {
+            width: 70%;
+            /* border: 2px solid rgba(0, 0, 0, 0.356); */
+            margin: 50% auto;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+
+        .box_frame h3 {
+            padding: 20px 0px;
+            color: rgb(182, 182, 182);
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+
+        .box_frame .btn-default {
+            /* font-size: 40px; */
+            /* margin: 20px; */
+            color: #00a2ff;
+            width: 100%;
+            border: none;
+            border-top: 1px solid #aaaaaa2f;
+            margin-bottom: 10px;
+            background: white;
+            outline: none;
+        }
+
+        /* 返回 */
+        .back{
+            width: 100%;
+            background: white;
+            font-size: 20px;
+            padding: 10px 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="back">
+            <span><</span>
+            <span>返回</span>
+    </div>
+    <!-- 头部 -->
+    <div class="box">
+        <div class="center_box row">
+            <P>
+                <img src="/img/TB17g.webp" width="100%">
+            </P>
+            <div class="add_text">
+                <P>
+                    请填写收货人
+                    <span>联系电话</span>
+                </P>
+                <P>
+                    请填写收货地址
+                </P>
+                <P>
+                    收货不便时，可选择免费暂存服务
+                </P>
+            </div>
+            <div class="modify">
+                <p>修改</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主体部分 -->
+
+    <div class="box shop_list bottom_margin">
+        <div class="main_center">
+            <p class="mer_name">天猫旗舰店</p>
+            <div class="shop_text row">
+                <p class="shop_img"><img src="" width="100%"></p>
+                <ul class="text_orders">
+                    <li>
+                        <p>商品名商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称称</p>
+                    </li>
+                    <li>
+                        <p>颜色：;尺码：;</p>
+                    </li>
+                    <li><img src="/img/TB1L.png" width="13%"></li>
+                    <li><span>七天无理由退货</span></li>
+                </ul>
+            </div>
+            <p class="delivery"><span>配送方式</span> <span>普通配送</span><span>快递 免邮</span></p>
+            <p class="delivery"><span>运费险</span> <span>卖家赠送，退换货可赔</span><span></span></p>
+            <p class="delivery"><span>订单备注</span> <input type="text" placeholder="选填,请先和商家商量一致"></p>
+            <p class="money"><span>共1件</span>小计<span>￥00.00</span></p>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom_box">
+        <p class="su_order"><span>共1件</span>合计:<span>￥00.00</span> <input type="button" value="提交订单"></p>
+    </div>
+
+
+
+    <!-- 修改弹框 -->
+    <div class="box_modify">
+        <div class="modify_center">
+            <h3>修改收货信息</h3>
+            <form>
+                <div class="modify_val">
+                    收货人:
+                    <input type="text" name="username" placeholder="">
+                </div>
+                <div class="modify_val">
+                    联系电话:
+                    <input type="text" name="phone" placeholder="">
+                </div>
+                <div class="modify_val">
+                    收货地址:
+                    <input type="text" name="address" placeholder="">
+                </div>
+                <div class="save_modify">
+                    <input type="submit" value="保存">
+                </div>
+            </form>
+
+            <span class="cancel"><img src="img/X.png" width="100%"></span>
+
+        </div>
+    </div>
+
+
+    <!-- 错误提示框 -->
+    <div class="error_box">
+        <div class="box_frame">
+            <h3>请将收货信息填写完整</h3>
+            <button type="button" class="btn btn-default">确定</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    // var ajax = new XMLHttpRequest();
+    // ajax.open('post','/suorders',true);
+    // ajax.send();
+    // ajax.onreadystatechange = function(){
+    //     if(ajax.readyState == 200 && ajax.status == 4){
+    //         var result = ajax.responseText;
+    //         console.log(result);
+    //     }
+    // }
+    // 定义一个对象存放订单数据
+    var style = localStorage['carid'];
+    var loca_login = localStorage['id'];
+    if (loca_login) {
+        $.ajax({
+            type: 'GET',
+            url: '/varification/' + loca_login,
+            // dataType:'json',
+            success: function (json) {
+                // console.log(json);
+                if (!json.sta) {
+                    window.location = '/userlogin';
+                }
+            }
+        });
+    } else {
+        window.location = '/userlogin';
+    }
+    var style_par = {};
+    style_par.id = style;
+    // console.log(style_par);
+    $.post('/orders/carbuy', style_par, function (res) {
+        // console.log(res);
+        addhtml(res);
+    });
+
+
+
+    var orders_su = {
+        uid: loca_login,        //会员id
+        linkman: '',            //联系人
+        address: '',            //地址
+        code: '51000',               //邮编
+        phone: '',              //电话
+        addtime: '',            //购买时间
+        total: '',              //总金额
+        status: '0',              //状态
+
+
+    };
+
+    var detail_su = {
+        orderid: [],                //订单id号
+        goodsid: [],                   //商品id号
+        name: [],                       //商品名称
+        price: [],                      //单价
+        num: [],                        //数量
+        color_size: [],                   //尺码颜色
+    };
+
+
+    // var carid = []; 
+
+    function addhtml(res) {
+        var style_html = "";
+        var num = 0;
+        // 总金额
+        var allmony = 0;
+        for (var i = 0; i < res.length; i++) {
+            style_html += '<div class="main_center">';
+            style_html += '   <p class="mer_name">' + res[i].qijiandian + '</p>';
+            style_html += '   <div class="shop_text row">';
+            style_html += '       <p class="shop_img"><img src="shop_img/' + res[i].picname + '" width="100%"></p>';
+            style_html += '       <ul class="text_orders">';
+            style_html += '           <li><p>' + res[i].name + '</p></li>';
+            style_html += '           <li><p>颜色/尺码：' + res[i].colorsize + '</p></li>';
+            style_html += '            <li><img src="/img/TB1L.png" width="13%"></li>';
+            style_html += '             <li><span>七天无理由退货</span></li>';
+            style_html += '          </ul>';
+            style_html += '       </div>';
+            style_html += '       <p class="delivery"><span>配送方式</span> <span>普通配送</span><span>快递 免邮</span></p>';
+            style_html += '      <p class="delivery"><span>运费险</span> <span>卖家赠送，退换货可赔</span><span></span></p>';
+            style_html += '      <p class="delivery"><span>订单备注</span> <input type="text" placeholder="选填,请先和商家商量一致"></p>';
+            style_html += '      <p class="money"><span>共' + res[i].num + '件</span>小计<span>￥' + (res[i].num * res[i].price) + '</span></p>';
+            style_html += '   </div>';
+            num += res[i].num;
+            allmony += (res[i].num * res[i].price);
+
+            detail_su.goodsid[i] = res[i].goodsid;                   //商品id号
+            detail_su.name[i] = res[i].name;                     //商品名称
+            detail_su.price[i] = res[i].price;                      //单价
+            detail_su.num[i] = res[i].num;                          //数量
+            detail_su.color_size[i] = res[i].colorsize;
+            // carid[i] = res[i].id;
+
+        }
+        // console.log(allmony);
+        orders_su.total = allmony;
+        $('.shop_list').html(style_html);
+        $('.su_order').html('<span>共' + num + '件</span>合计:<span>￥' + allmony + '</span> <input type="button" value="提交订单">');
+
+
+
+
+    }
+
+
+
+    $('.center_box').click(function () {
+        $('.box_modify').fadeIn();
+    });
+    $('.cancel').click(function () {
+        $('.box_modify').fadeOut();
+    });
+
+    $('form').submit(function () {
+        var data = $(this).serializeArray();
+        // console.log($(this).serializeArray());
+        orders_su.linkman = data[0].value;
+        orders_su.phone = data[1].value;
+        orders_su.address = data[2].value;
+        $('.add_text').html('<P>' + data[0].value + '<span>' + data[1].value + '</span></P><P>' + data[2].value + '</P><P>收货不便时，可选择免费暂存服务</P>');
+        $('.box_modify').fadeOut();
+        return false;
+    });
+
+    $('.btn-default').click(function () {
+        $('.error_box').fadeOut();
+        // $('.inpu_pass span').hide();
+    });
+
+
+    // // 将表单提交到后台数据库
+    $('.su_order').on('click', 'input', function () {
+        if (orders_su.linkman == '' || orders_su.phone == '' || orders_su.address == '') {
+            $('.error_box').fadeIn();
+            return;
+        }
+        // console.log(111111);
+        var date = new Date();
+        orders_su.addtime = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+        // console.log(orders_su.addtime);
+        $.post('/order/orders_su', orders_su, function (res) {
+            // console.log(res);
+            detail_su.orderid = res;
+            if(res){
+                var strin = JSON.stringify(detail_su);
+                $.post('/detail/submit', detail_su, function (ree) {
+                    // console.log(ree);
+                    window.location = "/xiangqing/"+res;
+                    // return;
+                });
+            }
+            
+        });
+
+    });
+
+
+    $('.back').click(function(){
+        window.history.go(-1);
+    });
+
+</script>
+
+</html>

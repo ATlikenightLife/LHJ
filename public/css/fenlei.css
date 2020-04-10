@@ -1,0 +1,272 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.row{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+[class *= "col-tl"]{
+    float: left;
+}
+[class *= "col-xt"]{
+    float: left;
+}
+.col-xt1{
+    width: 8.33%;
+}
+.col-xt2{
+    width: 16.66%;
+}
+.col-xt3{
+    width: 25%;
+}
+.col-xt4{
+    width: 33.33%;
+}
+.col-xt5{
+    width: 41.66%;
+}
+.col-xt6{
+    width: 50%;
+}
+.col-xt7{
+    width: 58.33%;
+}
+.col-xt8{
+    width: 66.66%;
+}
+.col-xt9{
+    width: 75%;
+}
+.col-xt10{
+    width: 83.33%;
+}
+.col-xt11{
+    width: 91.66%;
+}
+.col-xt12{
+    width: 100%;
+}
+.col-tl1{
+    width: 10%;
+}
+.col-tl2{
+    width: 20%;
+}
+.col-tl3{
+    width: 30%;
+}
+.col-tl4{
+    width: 40%;
+}
+.col-tl5{
+    width: 50%;
+}
+.col-tl6{
+    width: 60%;
+}
+.col-tl7{
+    width: 70%;
+}
+.col-tl8{
+    width: 80%;
+}
+.col-tl9{
+    width: 90%;
+}
+.col-tl10{
+    width: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgb(242, 242, 242);
+    overflow: hidden;
+    position: relative;
+    flex-direction: row;
+    align-content: flex-start;
+    flex: 1 1 0%;
+}
+
+.main-left{
+    width: 28%;
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+	overflow-x: hidden;
+}
+.main-left-warp{
+   overflow: scroll;
+}
+.main-right{
+    width: 72%;
+}
+.nav-content{
+    display: none;
+}
+.main-left ul li{
+    display: block;
+    width: 100%;
+    height: 13.35vw;
+    position: relative;
+}
+.main-left ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    text-align: center;
+    font-size: 3.8vw;
+    line-height: 13.35vw;
+    padding: 0;
+    margin: 0 auto;
+}
+.main-left ul .dot a{
+    color: rgb(254, 121, 35);
+    background-color: rgb(242, 242, 242);
+   
+}
+.main-left ul .left-icon{
+    width: 0.8vw;
+    height: 7vw;
+    display: flex;
+    border-radius: 1vw;
+    background-image: linear-gradient(rgb(245, 220, 187) 10%, rgb(254, 121, 35));
+    position: absolute;
+    left: 0;
+    top: 3vw;
+    z-index: 1;
+    display: none;
+}
+.main-right{
+    padding: 0 0 0 3.2vw; 
+    padding-top: 0.8vw;
+    width: 100%;
+    overflow-y: auto;
+	overflow-x: hidden;
+}
+/* 标题 */
+.title{
+    padding: 3vw 0;
+    font-size: 3.6vw;
+}
+
+/* 排行榜 */
+.container1{
+    clear: both;
+}
+.phb-1{
+    display: flex;
+    position: relative;
+    width:22.1vw;
+    height: 24.95vw;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 3.5vw;
+    float: left;
+}
+.phb-1-img1{
+    width: 100%;
+    height: 100%;
+}
+.phb-1-title{
+    position: absolute;
+    left: 2vw;
+    top: 2vw;
+    font-size: 3.4vw;
+    color: #fff;
+}
+.phb-1-img2{
+    position: absolute;
+    right: 2vw;
+    bottom: 2vw;
+    width: 3.2vw;
+    height:3.2vw;
+}
+.phb-1:nth-child(2){
+    margin-left: 2.5vw;
+}
+.phb-1:nth-child(3){
+    margin-left: 2.5vw;
+}
+/* 排行榜结束 */
+
+
+.rmlm{
+    position: relative;
+    margin-right: 3vw;
+}
+
+.rmlm-warp{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    width: 22.1vw;
+    height: 24.8vw;
+    margin: 1.5vw 0;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+}
+
+/* 热销榜 */
+.rxb{
+    position: absolute;
+    right: 3vw;
+    top: 3vw;
+}
+.rxb span{
+    color: rgb(255, 140, 1);
+}
+.glyphicon-menu-right{
+    position: relative;
+    top: 0.5vw;
+}
+
+.rmlm-content{
+    display: flex;
+    position: relative;
+    /* background-color: #fff; */
+    overflow: hidden;
+    background: #fff;
+    border-radius: 3vw;
+    padding: 3.6vw 4.8vw;
+    flex-flow: row wrap;
+    align-items: center;
+    place-content: flex-start space-between;
+    margin-right: 3.0vw;
+}
+.rmlm-content>div{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    width: 16.55vw;
+    height: 23.45vw;
+    margin: 1.2vw 0;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+}
+.rmlm-img{
+    width: 100%;
+    height: 16.55vw;
+}
+.rmlm-h3{
+    font-size: 3.2vw;
+    color: rgb(102, 102, 102);
+
+}

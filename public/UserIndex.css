@@ -1,0 +1,243 @@
+body{
+    background: #aaaaaa2a;
+}
+
+
+/* 头部************************************************ */
+.top_box{
+    width: 100%;
+    background: linear-gradient(90deg,rgba(255, 145, 0, 0.966),rgb(255, 102, 0));
+}
+.row{
+    margin: 0;
+    padding: 15px;
+}
+.Avatar {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    /* width:18%; */
+    float: left;
+    /* padding: 10px; */
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.Username{
+    float: left;
+    width: 60%;
+    color: white;
+    font-size: 30px;
+    padding-left: 20px ;
+}
+.setting{
+    width: 20%;
+    /* float: right; */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.setting p{
+    width: 50%;
+    float: left;
+    padding: 7px;
+}
+
+.top_lishi{
+    width: 100%;
+    float: left;
+    list-style:none;
+    padding:0;
+    padding-top: 20px;
+
+
+}
+.top_lishi li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* 主体*********************************************************** */
+
+.main{
+    width: 100%;
+    padding: 10px;
+
+}
+.main_box{
+    background: white;
+    border-radius: 10px;
+    padding: 0;
+    margin: 10px 0px;
+}
+.my_orders{
+    padding: 10px;
+    font-family: '黑体';
+    font-size: 4vw;
+    font-weight: 550;
+    border-bottom: 1px solid #aaaaaa54;
+}
+
+.my_orders span{
+    float: right;
+    color: #aaaaaa;
+    font-size: 4vw;
+    font-weight: 100;
+}
+
+.orders_infor{
+    list-style: none;
+    padding: 10px;
+}
+.orders_infor li{
+    width: 20%;
+    float: left;
+    /* padding: 0px 2vw; */
+    text-align: center;
+    color: #616161;
+    font-size: 3vw;
+}
+.orders_infor1{
+    list-style: none;
+    padding: 10px;
+}
+.orders_infor1 li{
+    width: 25%;
+    float: left;
+    /* padding: 0px 2vw; */
+    text-align: center;
+    color: #616161;
+    font-size: 3vw;
+}
+
+/* 底部**************************************************************** */
+.tbdh{
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 43px;
+    z-index: 1001;
+    background-color: #fff;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 0 20px;
+    padding-top: 2px;
+    box-sizing: border-box;
+}
+.tbdh a{
+    text-decoration: none;
+    display: block;
+    color: #5d656b;
+    text-align: center;
+}
+
+.tbdh a:nth-child(5){
+    position: absolute;
+    right: 20px;
+}
+.tbdh a:nth-child(2){
+   position: absolute;
+   left: 23.5vw;
+}
+.tbdh a:nth-child(3){
+    position: absolute;
+    left: 46vw;
+}
+.tbdh a:nth-child(4){
+    position: absolute;
+    left: 70vw;
+}
+.glyphicon{
+    font-size: 20px;
+    text-align: center;
+}
+.glyphicon p{
+    padding-top: 2px;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* 弹框******************************************************* */
+
+.error_box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.356);
+    top: 0;
+    display: none;
+}
+.box_frame{
+    width: 70%;
+    /* border: 2px solid rgba(0, 0, 0, 0.356); */
+    margin: 50% auto;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+.box_frame h3{
+    padding:10px;
+    color: rgb(182, 182, 182);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.box_frame .btn-default{
+    /* font-size: 40px; */
+    /* margin: 20px; */
+    color: #00a2ff;
+    width: 50%;
+    float: left;
+    border: none;
+    border-top:1px solid #aaaaaa2f;
+    /* margin-bottom: 10px; */
+}
+
+.face_img{
+    width: 100%;
+    position:fixed;
+    background: rgba(0, 0, 0, 0.37);   
+    height: 100%;
+    top: 0;
+    display: none;
+}
+
+.face_box{
+    background: white;
+    width: 70%;
+    margin: 200px auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+
+.face_box h2{
+    font-size: 15px;
+    font-weight: 300;
+    color: #aaaaaa;
+
+}
+.sur{
+    padding: 10px;
+    width: 100%;
+    /* margin: 10px; */
+    border: none;
+    /* background: none; */
+    border-bottom: 1px solid #aaaaaa;
+    /* background: #aaaaaa; */
+}
+.exit_x{
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户页面</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.theme.min.css" type="text/css"> -->
+    <link rel="stylesheet" href="/UserIndex.css" type="text/css">
+    <script src="/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/UserIndex.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+
+    <div class="top_box row">
+        <div class="Avatar"><img src="images/user.png" alt="" width="70" height="70"></div>
+        <div class="Username">
+            <p>登录</p>
+        </div>
+        <div class="setting">
+            <p class=""><img src="images/Userim (2).png" alt="" width="100%"></p>
+            <p id="exit_login"><img src="images/exit.png" alt="" width="100%"></p>
+        </div>
+        <ul class="top_lishi">
+            <li>
+                <p>0</p>
+                <p>收藏夹</p>
+            </li>
+            <li>
+                <p>0</p>
+                <p>关注店铺</p>
+            </li>
+            <li>
+                <p>0</p>
+                <p>足迹</p>
+            </li>
+            <li>
+                <p>0</p>
+                <p>红包卡卷</p>
+            </li>
+        </ul>
+    </div>
+    <!-- 主体 -->
+
+    <div class="main">
+        <div class="main_box row">
+            <p class="my_orders">我的订单<span>查看全部订单<i style="font-style: normal;     font-size: 3.5vw;"
+                        class="glyphicon glyphicon-menu-right"></i></span></p>
+            <ul class="orders_infor row">
+                <li><img src="images/TB16.webp" alt="" width="50%">
+                    <p>待付款</p>
+                </li>
+                <li><img src="images/TB17.webp" alt="" width="50%">
+                    <p>待发货</p>
+                </li>
+                <li><img src="images/TB18.png_60x60" alt="" width="50%">
+                    <p>待收货</p>
+                </li>
+                <li><img src="images/TB19.webp" alt="" width="50%">
+                    <p>评价</p>
+                </li>
+                <li><img src="images/TB20.webp" alt="" width="50%">
+                    <p>退款/售后</p>
+                </li>
+            </ul>
+        </div>
+        <div class="main_box row">
+            <p class="my_orders">必备工具<span>查看全部工具<i style="font-style: normal;     font-size: 3.5vw;"
+                        class="glyphicon glyphicon-menu-right"></i></span></p>
+            <ul class="orders_infor1 row">
+                <li><img src="images/TB100.webp" alt="" width="40%">
+                    <p>每日返现</p>
+                </li>
+                <li><img src="images/TB101.webp" alt="" width="40%">
+                    <p>领卷中心</p>
+                </li>
+                <li><img src="images/TB102.webp" alt="" width="40%">
+                    <p>闲置换钱</p>
+                </li>
+                <li><img src="images/TB103.webp" alt="" width="40%">
+                    <p>客服热线</p>
+                </li>
+                <li><img src="images/TB104.webp" alt="" width="40%">
+                    <p>花呗</p>
+                </li>
+                <li><img src="images/TB105.webp" alt="" width="40%">
+                    <p>菜鸟驿站</p>
+                </li>
+                <li><img src="images/TB106.webp" alt="" width="40%">
+                    <p>天猫农场</p>
+                </li>
+                <li><img src="images/TB107.webp" alt="" width="40%">
+                    <p>主题皮肤</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- 底部 -->
+    <footer class="row tbdh">
+        <a href="/" class="tbdh1"><span class="glyphicon glyphicon-home">
+                <p>首页</p>
+            </span></a>
+        <a href="#" class="shop_car"><span class="glyphicon glyphicon-shopping-cart">
+                <p>购物车</p>
+            </span></a>
+        <a href="#" class="Theorderlist"><span class="glyphicon glyphicon-list-alt">
+                <p>订单列表</p>
+            </span></a>
+        <a href="#"><span class="glyphicon glyphicon-user" style="color:orange;">
+                <p>我的淘宝</p>
+            </span></a>
+        <a href="#"><span class="glyphicon glyphicon-option-horizontal">
+                <p>更多</p>
+            </span></a>
+    </footer>
+    <div class="face_img">
+        <div class="face_box">
+            <form action="/upload" enctype="multipart/form-data" method="POST" class="form_class">
+                <span class="exit_x">X</span>
+                <div style="margin: 5px;"><img id="imgs" width="80" height="80"  style="border-radius: 8px;"></div>
+                <h2 class="shangchuan">点击头像上传</h2>
+                <input type="file" name="face" id="face" style="display: none;">
+                <input type="submit" value="确定" class="sur">
+            </form>
+        </div>
+    </div>
+
+    <!-- 弹框 -->
+    <div class="error_box">
+        <div class="box_frame row">
+
+            <h3 id="h3_text">密码存在空格,请重新输入</h3>
+            <button type="button" class="btn btn-default " id="but_yes">是</button>
+            <button type="button" class="btn btn-default " id="but_no">否</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

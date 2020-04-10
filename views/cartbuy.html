@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>   
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/cartbuy.css">
+    
+</head>
+<body>
+    <div id="cartBuy" class="cartbuy">
+        <div class="cartbuy-container">
+            <header class="cart-header">
+                <div class="back" data-reactid="">
+                    
+                </div>  
+                <div class="title">
+                    <span>购物车</span>
+                    <span>(0)</span>
+                </div>
+            </header>
+
+        
+            <div class="allItem">
+                {{#each data}}
+                <div class="item-box" data-id="{{id}}">
+                    <!-- 店铺信息 -->
+                    <div class="shop">
+                        <div class="shop-check">
+                            <!-- <input type="checkbox" class="ipt" id="ipt1" > -->
+                            <label class="select-all">
+                                <!-- <span class="btn-icom" data-tu = 'true'></span> -->
+                            </label>
+                        </div>
+                        <div class="shop-icom"><span><img src="images/icom_shop.png"></span></div>
+                        <div class="shop-name">{{qijiandian}}<span class="glyphicon glyphicon-menu-right" style="font-size: 13px; color: #aaaaaa;"></span></div>
+                        <div class="shop-other">
+                            <ul>
+                                <li>领券</li>
+                                <li class="del" data-id="{{id}}">删除</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 商品信息 -->
+                    <div class="goods">
+                        <div class="goods-content">
+                            <!-- <div class="goods-check"><input type="checkbox" class="ipt" id="ipt2"></div> -->
+                            <label class="select-all">
+                                <span class="btn-icom" data-tu = 'true' data-id="{{id}}"></span>
+                            </label>
+                            <div class="goods-detail">
+                                <div class="goods-img">
+                                    <a> <img src="shop_img/{{picname}}"></a> 
+                                </div>
+                                <div class="goods-info">
+                                    <a>
+                                        <h3 class="goods-title">{{name}}</h3></h3>
+                                        <div class="goods-size"><p>{{colorsize}}</p><span class="glyphicon glyphicon-chevron-down"></span></div>
+                                    </a>
+                                    <div class="price-box">
+                                        <div class="goods-price"><p>￥{{price}}</p></div>
+                                        <div class="goods-num">
+                                            <p>
+                                                <input type="button" value="-" id="btn1" class="btn1">
+                                                <input type="text" value={{num}} id="ipt3" class="ipt3">
+                                                <input type="button" value="+" id="btn2" class="btn2">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            
+            <!-- 结算框 -->
+            <div class="settlement-bar ">
+                <div class="checkbox-wrapper">
+                    <label class="select-all">
+                        <span class="btn-icom" id="allsel" data-tu="true">全选</span>
+                    </label>
+                </div> 
+                <div class="submit-wrapper">
+                    <span class="price-wrapper">
+                        <div class="post-price">
+                            合计:
+                            <span class="price">￥0.00</span>
+                        </div>
+                        <span class="btn submit disabled cli_submit" id="settle">结算(0)</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部导航条 -->
+            <footer class="row tbdh">
+                <a href="/index" class="tbdh1"><span class="glyphicon glyphicon-home"><p>首页</p></span></a>
+                <a href="/cartbuy" style="color: rgb(255, 165, 80);"><span class="glyphicon glyphicon-shopping-cart"><p>购物车</p></span></a>
+                <a href="#" class="Theorderlist"><span class="glyphicon glyphicon-list-alt"><p>订单列表</p></span></a>
+                <a href="/UserIndex"><span class="glyphicon glyphicon-user"><p>我的淘宝</p></span></a>
+                <a href="#"><span class="glyphicon glyphicon-option-horizontal"><p>更多</p></span></a>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="js/cartbuy.js"></script>
+</html>

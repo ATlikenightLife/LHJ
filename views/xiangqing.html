@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- bs的js组件依赖于jq，所以我们要先引入jq -->
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/xiangqing.css">
+</head>
+
+<body>
+    <div class="head">
+        <div class="back">
+            <span class="glyphicon glyphicon-menu-left"></span>
+            <span>返回</span>
+        </div>
+        <div class="other">
+            <span class="glyphicon glyphicon-option-vertical"></span>
+        </div>
+    </div>
+    <div class="box">
+        <div class="top">
+            <div class="topLeft">
+                <p class="maijia">卖家已发货</p>
+                <p>还剩12天22时自动确认</p>
+            </div>
+            <div class="img">
+                <!-- <img src="images/1.webp" width="100%" alt=""> -->
+            </div>
+        </div>
+
+        <div class="baoguo">
+            <div class="baoguoImg">
+                <img src="images/6.PNG" width="100%" alt="">
+            </div>
+            <div class="baoguoWu">
+                <span style="color: rgba(53,154,43,1);font-size:14px;">您的包裹已出库</span>
+                <span style="color: rgba(153,153,153,1);font-size: 12px;">2019-11-11 09:49:48</span>
+            </div>
+            <div class="baoguoBq">
+                <div class="glyphicon glyphicon-menu-right"></div>
+            </div>
+        </div>
+        <div class="dizhi">
+            <div class="addimg">
+                <img src="images/2.webp" width="100%" alt="">
+            </div>
+            <div class="address">
+                <span>{{linkman}}</span>
+                <span style="color: #999999;font-size: 14px;margin-left:5px">+86-{{phone}}</span>
+                <span style=" display: flex;">{{address}}</span>
+            </div>
+        </div>
+
+
+        {{#each data}}
+        <div class="names">
+            <img src="images/3.webp" width="100%" alt="">
+            <span>{{merchant}}</span>
+            <div class="bg">
+                <img src="images/4.png" width="100%" alt="">
+            </div>
+        </div>
+
+        <div class="shangpin">
+            <div class="shangpinImg">
+                <img src="shop_img/{{picname}}" width="100%" alt="">
+            </div>
+            <div class="shangpinXin">
+                <p style="font-size: 13px;" class="shangpinXin_a">{{name}}</p>
+                <span style="color: #999999;">{{colorsize}}</span>
+                <span class="shangpinXin_b">七天无理由退换</span>
+            </div>
+            <div class="shangpinJiage">
+                <span>￥{{price}}</span>
+                <span style="color: #999999;font-size: 12px;">x{{num}}</span>
+            </div>
+        </div>
+
+        <div class="tuihuan">
+            <div class="tuihuan_a">退换</div>
+        </div>
+
+        <div class="baoxian">
+            <div class="baoxianFu">
+                <span>保险服务</span>
+            </div>
+            <div class="baoxianXq">
+                <div class="baoxianXq_a">
+                    <span>运费险</span>
+                    <span>运费</span>
+                </div>
+                <div class="baoxianXq_b">
+                    <span>卖家赠送</span>
+                    <span>￥0.00</span>
+                </div>
+                <div class="baoxianXq_c">
+                    <span>订单总价支付明细</span>
+                </div>
+                <div class="baoxianXq_a">
+                    <span>红包抵扣</span>
+                    <span>实付款</span>
+                </div>
+                <div class="baoxianXq_b">
+                    <span>￥0.00</span>
+                    <span>￥{{total}}</span>
+                </div>
+                <div class="baoxianXq_d">
+                    <span>创建时间:</span>
+                    <span style="float: right;">{{addtime}}</span>
+                </div>
+                <div>
+                    <span style="font-size: 14px;color: #666666;">订单总价（含运费）</span>
+                    <span style="color: #ff5500;font-size: 16px;" class="baoxianXq_i">￥{{total}}</span>
+                </div>
+
+            </div>
+        </div>
+        {{/each}}
+        <div class="bottom">
+            <div class="bottom_a">
+                <span><img src="images/7.PNG" alt=""></span>
+                <span>联系卖家</span>
+            </div>
+            <div class="bottom_a">
+                <span><img src="images/8.PNG" alt=""></span>
+                <span>拨打电话</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="guding">
+        <div class="guding_a">
+            <span>更多</span>
+        </div>
+        <div class="guding_b">
+            <span>申请开票</span>
+            <span>查看物流</span>
+            <span id="btn">确认收货</span>
+        </div>
+    </div>
+</body>
+<script>
+    var loca_login = localStorage['id'];
+    if (loca_login) {
+        $.ajax({
+            type: 'GET',
+            url: '/varification/' + loca_login,
+            // dataType:'json',
+            success: function (json) {
+                // console.log(json);
+                if (!json.sta) {
+                    window.location = '/userlogin';
+                }
+            }
+        });
+    } else {
+        window.location = '/userlogin';
+    }
+    $('.back').click(function () {
+        window.location = '/Theorderlist/'+loca_login;
+    })
+</script>
+
+</html>

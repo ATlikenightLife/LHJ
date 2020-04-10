@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/z_details.css">
+    <title>Document</title>
+</head>
+
+<body data-id="{{data.id}}" data-img="{{data.picname}}">
+    <div class="page-warp">
+        <!-- 头部 -->
+        <div class="details-top">
+            <div class="header">
+                <div class="header-dom">
+                    <div class="dom-left-btn">
+                        <a href="javascript:void(0)" class="left-btn-link">
+                            <span class="top-icons"></span>
+                        </a>
+                    </div>
+                    <ul class="dom-header-nav">
+                        <li data-index="0" class="active">商品</li>
+                        <li data-index="1">评价</li>
+                        <li data-index="2">详情</li>
+                    </ul>
+                    <div class="dom-right-btn">
+                        <a href="javascript:void(0)" class="right-btn-link">
+                            <span class="top-icons1"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-jump"></div>
+            </div>
+        </div>
+        <!-- 主体 -->
+        <div class="details-content">
+            <div class="container1">
+                <div class="group-warp"></div>
+                <div class="group-warp">
+                    <div class="modlue-warp">
+                        <div class="modlue-preview modlue-preview-mb">
+                            <section class="preview-slider">
+                                <div class="slider-container slider-container1">
+                                    <a class="item col-xs-12"><img src="/shop_img/{{data.picname}}" alt=""></a>
+                                    <a class="item col-xs-12"><img src="/images/shop1-2.webp" alt=""></a>
+                                    <a class="item col-xs-12"><img src="/images/shop1-3.webp" alt=""></a>
+                                    <a class="item col-xs-12"><img src="/images/shop1-4.webp" alt=""></a>
+                                    <a class="item col-xs-12"><img src="/images/shop1-5.webp" alt=""></a>
+                                </div>
+                                <div class="slider-nav">
+                                    <i class="current"><span class="pagination">1/5</span></i>
+                                    <i ><span class="pagination">2/5</span></i>
+                                    <i><span class="pagination">3/5</span></i>
+                                    <i><span class="pagination">4/5</span></i>
+                                    <i><span class="pagination">5/5</span></i>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="modlue-preview">
+                            <div class="modlue-price">
+                                <div class="price-area">
+                                    <img src="images/shop-banner.webp" alt="">
+                                    <div class="inner">
+                                        <div class="inner-l">
+                                            <div class="price-real">
+                                                <span class="lable"></span>
+                                                <i class="symble">￥</i>
+                                                <span class="num">{{data.price}}</span>
+                                            </div>
+                                            <div class="price-desc">{{data.name}}</div>
+                                        </div>
+                                        <a href="javascript:void(0)" class="inner-r" target="_blank">
+                                            <img src="images/shop-banner1.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="price-info-area"></div>
+                            </div>
+                        </div>
+                        <div class="modlue-preview">
+                            <div class="modlue-title">
+                                <div class="title-share">
+                                    <div class="title-centent"></div>
+                                    <span class="share-div"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modlue-preview">
+                            <div class="modlue-adds">
+                                <span class="postage">快递 0.00</span>
+                                <span class="sales">月销量 {{data.num}}件</span>
+                                <span class="delivery">{{data.loca}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp">
+                    <div class="modlue-preview">
+                        <div class="modlue-prom">
+                            <div class="prom-content">
+                                <div class="content-lf">促销</div>
+                                <div class="prom-content-ct">
+                                    <div class="prom-content-ct-1">
+                                        <div class="ic-box">
+                                            <span>积分</span>
+                                        </div>
+                                        <div class="ct-cell">
+                                            <span>购买可得495积分</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prom-content-rg">
+                                    <span class="glyphicon glyphicon-menu-right" style="top: -1px"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modlue-preview">
+                        <div class="modlue-advantage">
+                            <div class="advantage-warp">
+                                <div class="advantage-content">
+                                    <div class="content-lf">服务</div>
+                                    <div class="prom-content-ct">
+                                        <div class="prom-content-ct-1">
+                                            <ul class="advantage-list">
+                                                <li>假一赔四</li>
+                                                <li>上门取退</li>
+                                                <li>极速退款</li>
+                                                <li>七天无理由退换</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="prom-content-rg">
+                                        <span class="glyphicon glyphicon-menu-right" style="top: -4px"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp">
+                    <div class="modlue-preview">
+                        <div class="modlue-sku">
+                            <div class="skutext">
+                                <div class="content-lf">选择</div>
+                                <div class="prom-content-ct">请选择颜色分类/尺码</div>
+                                <div class="prom-content-rg">
+                                    <span class="glyphicon glyphicon-menu-right" style="top: -4px"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modlue-preview">
+                        <div class="modlue-sku">
+                            <div class="skutext">
+                                <div class="content-lf">参数</div>
+                                <div class="prom-content-ct">品牌 适用年龄...</div>
+                                <div class="prom-content-rg">
+                                    <span class="glyphicon glyphicon-menu-right" style="top: -4px"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp">
+                    <div class="modlue-preview">
+                        <div class="evaluation-warp">
+                            <div class="evaluation">
+                                <div class="evaluation-main">
+                                    <div class="evaluation-main-title">
+                                        商品评价(11)
+                                        <div class="evaluation-main-title-icon">
+                                            查看全部
+                                            <span class="glyphicon glyphicon-menu-right"></span>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-main-comments">
+                                        <div class="evaluation-main-comments-user">
+                                            <img class="evaluation-main-comments-user-hp" src="images/advat.webp" >
+                                            <img class="evaluation-main-comments-user-crown" src="images/advat1.webp" >
+                                            <span class="evaluation-main-comments-user-name">n**i</span>
+                                            <img class="evaluation-main-comments-user-icon" src="images/advat2.webp" alt="">
+                                        </div>
+                                        <div class="evaluation-main-comments-content">Cos的羊毛衣服一直质量杠杠的，细腻，洗衣机甩都不变形缩水，每年都买至少一件它的羊毛制品，有旗舰店真棒，以后不用专门跑去香港了</div>
+                                        <div class="evaluation-main-comments-data">2019-10-04 颜色分类:黑色;尺码:175/104A/L</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp">
+                    <div class="modlue-preview">
+                        <div class="modlue-shop">
+                            <div class="shop-main">
+                                <div class="shop-logo">
+                                    <img src="images/shop_logo.webp" alt="">
+                                </div>
+                                <div class="shop-info">
+                                    <div class="shop-title">{{data.merchant}}</div>
+                                    <div class="shop-icon">
+                                        <img src="images/shop-logo1.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="shop-score">
+                                <li>宝贝描述<b class="score-up">4.9</b></li>
+                                <li>卖家服务<b class="score-up">4.9</b></li>
+                                <li>物流服务<b class="score-up">4.9</b></li>
+                            </ul>
+                            <div class="shop-link">
+                                <a href="" target="_blank">全部商品</a>
+                                <a href="" target="_blank">进入店铺</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp">
+                    <div class="modlue-preview">
+                        <div class="modlue-recommend">
+                            <span class="recommend-title">看了又看</span>
+                            <div class="recommend-content">
+                                <div class="recommend-content-warp">
+                                    <div class="panel">
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend1.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS女装 纯棉平纹针织T恤藏青色/白色2019夏季新品0753391004</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥170</del>
+                                                    <span class="panel-price">¥170</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend2.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS女鞋 厚底皮革凉鞋黑色2019夏季新品0745818003</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥990</del>
+                                                    <span class="panel-price">¥990</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend3.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS男装 宽松内搭圆领短袖纯棉T恤午夜蓝2019春秋新品0164609067</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥170</del>
+                                                    <span class="panel-price">¥170</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend4.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS女装 纯棉平纹针织T恤藏青色/白色2019夏季新品0753391004</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥170</del>
+                                                    <span class="panel-price">¥170</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend5.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS女鞋 厚底皮革凉鞋黑色2019夏季新品0745818003</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥990</del>
+                                                    <span class="panel-price">¥990</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend6.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS男装 宽松内搭圆领短袖纯棉T恤午夜蓝2019春秋新品0164609067</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥170</del>
+                                                    <span class="panel-price">¥170</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend7.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS女装 纯棉平纹针织T恤藏青色/白色2019夏季新品0753391004</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥170</del>
+                                                    <span class="panel-price">¥170</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend8.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS女鞋 厚底皮革凉鞋黑色2019夏季新品0745818003</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥990</del>
+                                                    <span class="panel-price">¥990</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="panel-item col-xs-4">
+                                            <a href="">
+                                                <div class="panel-img">
+                                                    <img src="images/recommend9.webp" alt="">
+                                                </div>
+                                                <div class="panel-title">COS男装 宽松内搭圆领短袖纯棉T恤午夜蓝2019春秋新品0164609067</div>
+                                                <div class="panel-numbers">
+                                                    <del>¥170</del>
+                                                    <span class="panel-price">¥170</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp">
+                    <div class="modlue-preview">
+                        <div class="modlue-desc">
+                            <div class="desc-title">
+                                <div class="desc-title-Af">
+                                    <div class="desc-cell">
+                                        <hr>
+                                    </div>
+                                    <span class="desc-txt">详情</span>
+                                    <div class="desc-cell">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc-container">
+                                <!-- <div class="subtitle">
+                                    <h3 class="subtitle-h3">"初上市价990元"</h3>
+                                </div>
+                                <section class="container-desc">
+                                    <img src="images/spaceball.gif" alt="">
+                                    <div></div>
+                                    <p style="margin: 0; word-break: break-all">
+                                        <img src="images/desc1.webp" alt="">
+                                    </p>
+                                    <div></div>
+                                    <div class="desc-main">
+                                        <div><img src="images/desc2.webp" alt=""></div>
+                                        <div class="crop-unit"><img src="images/desc3.webp" alt=""></div>
+                                        <div class="crop-unit desc-text">
+                                            <div style="font-family:黑体; text-align:center; margin: 40px auto 0 auto;" >
+                                                <p><span>长款美利奴羊毛连衣裙</span></p>
+                                                <p><span style="font-size: 20.0px;color: #444444;">延续简约设计理念，由美利奴羊毛面料打造而成，表面呈现出细腻的平纹针织质感。长款直筒版型，搭配贴合颈线的半高领及长袖，边缘另饰有细密的罗纹。</span></p>
+                                                <p><span style="font-size: 20.0px;color: #444444;">尺码S的后裙长为127厘米；模特身高178厘米，穿着尺码S。</span></p>
+                                                <div style="border-top: 1.0px solid #dddddd;margin: 20.0px 0;"> &nbsp; </div>
+                                                <p class="desc-text-p1">
+                                                    商品编号：
+                                                    <span style="font-family: arial;font-size: 20.0px;color: #444444;"> 0780533001 </span>
+                                                </p>
+                                                <p class="desc-text-p1">
+                                                        <span style="font-size: 20.0px;color: #444444;"> 成份： 100% 美利奴羊毛 </span>
+                                                </p>
+                                                <p class="desc-text-p1">
+                                                        <span style="font-size: 20.0px;color: #444444;"> 洗涤建议： 干洗，中温熨烫，冷水温和机洗，需要时只可用非氯性漂白剂 </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit" style="margin-top: 40px;">
+                                            <div class="">
+                                                <img src="images/desc5.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit" style="margin-top: 40px;">
+                                            <div class="">
+                                                <img src="images/desc6.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit" style="margin-top: 40px;">
+                                            <div class="">
+                                                <img src="images/desc7.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit" style="margin-top: 40px;">
+                                            <div class="">
+                                                <img src="images/desc8.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit" style="margin-top: 40px;">
+                                            <div class="">
+                                                <img src="images/desc9.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit" style="margin-top: 40px;">
+                                            <div class="">
+                                                <img src="images/desc10.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc11.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc12.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc13.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc14.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc15.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc16.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc17.webp" alt="">
+                                        </div>
+                                        <p style="margin: 0;">&nbsp;</p>
+                                        <div class="crop-unit">
+                                            <img src="images/desc18.webp" alt="">
+                                        </div>
+                                        <div class="crop-unit">
+                                            <img src="images/desc19.png" alt="">
+                                        </div>
+                                        <div class="crop-unit"></div>
+                                    </div>
+
+                                </section>
+                                <section class="mods-warp"></section> -->
+                                {{{descr}}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-warp"></div>
+                <div class="group-warp"></div>
+                <div class="group-warp"></div>
+            </div>
+        </div>
+        <!-- 尾部 -->
+        <div class="details-bottom">
+            <div class="details-bottom-opend"></div>
+            <div class="details-bottom-content">
+                <div class="bottom-content-warp">
+                    <a href="" target="_blank">
+                        <span class="bottom-icon1"></span><span>店铺</span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span class="bottom-icon2"></span><span>客服</span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span class="bottom-icon3"></span><span>收藏</span>
+                    </a>
+                    <div class="content-trade">
+                        <a  ><p>加入购物车</p></a>
+                        <a  ><p>立即购买</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 弹窗 -->
+        <div class="gwc">
+            <div class="gwc-bg"></div>
+            <div class="gwc-content">
+                <div class="content-warp">
+                    <div class="gwc-header">
+                        <div class="gwc-header-img">
+                            <img src="shop_img/{{data.picname}}" width="100%" height="100%">
+                        </div>
+                        <div class="gwc-header-main">
+                            <div class="gwc-header-main-price">
+                                <span>  ¥{{data.price}} </span>
+                            </div>
+                            <div class="gwc-header-main-stock">库存{{data.store}}件</div>
+                            <div class="gwc-header-main-info">
+                                已选择 <span class="gwc-header-main-info-color"></span><span class="gwc-header-main-info-check"></span>
+                            </div>
+                        </div>
+                        <a class="gwc-header-close">
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="gwc-body">
+                        <ul class="gwc-body-list">
+                            <li>
+                                <h3 class="gwc-body-list-title">颜色分类</h3>
+                                <div class="gwc-list-item gwc-list-item-f">
+                                    {{{color}}}
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="gwc-body-list-title">尺码</h3>
+                                <div class="gwc-list-item gwc-list-item-c">
+                                    {{{size}}}
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="gwc-body-num">
+                            <label for="number">购买数量</label>
+                            <div class="gwc-body-number">
+                                <button>-</button>
+                                <input type="text" value="1" class="gwc-body-number-input">
+                                <button style="border-left:1px solid #fff ">+</button>
+                            </div>
+                        </div>
+                        <div class="gwc-body-fenqi">
+                            <h3 class="">花呗分期(可选)</h3>
+                            <div class="gwc-body-fenqi-content">
+                                <label for="" role="button">
+                                    <span class="feiqi-content-top">分3期(含手续费)</span>
+                                    <span>
+                                        <em>¥</em><span class="number-1-1">337.59</span>/期 
+                                    </span>
+                                </label>
+                                <label for="" role="button">
+                                    <span class="feiqi-content-top">分6期(含手续费)</span>
+                                    <span>
+                                        <em>¥</em><span class="number-1-1">172.42</span>/期
+                                    </span>
+                                </label>
+                                <label for="" role="button">
+                                    <span class="feiqi-content-top">分9期(含手续费)</span>
+                                    <span>
+                                        <em>¥</em><span class="number-1-1">88.68</span>/期
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gwc-footer">
+                        <div class="content-trade">
+                            <a class="shop_cart"><p>加入购物车</p></a>
+                            <a class="buy_now"><p>立即购买</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="join_success">
+        <p><img src="images/success.png" alt="" width="100%"> 成功加入购物车</p>
+    </div>
+
+
+</body>
+<script src="/Z_details.js"></script>
+</html>

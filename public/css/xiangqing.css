@@ -1,0 +1,392 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #F4F4F4;
+}
+
+/* 头部 */
+.head{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to right, rgb(255, 144, 0), rgb(255, 80, 0)) center center / cover no-repeat;
+    color: rgba(255,255,255,1);
+    z-index: 10;
+    /* display: none; */
+}
+
+.back{
+    display: inline-block;
+}
+.back span:nth-child(1){
+    color: rgba(255,255,255,1);
+    margin-left: 10px;
+    margin-top: 9px;
+    font-size: 18px;
+}
+.back span:nth-child(2){
+    margin-top: 7px;
+    font-size: 17px;
+}
+.other{
+    float: right;
+    margin-right: 15px;
+    margin-top: 9px;
+    font-size: 18px;
+}
+.other span{
+    color: rgba(255,255,255,1);
+}
+.back .glyphicon{
+    top: 3px;
+} 
+
+
+/* 主体 */
+.box{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.box::-webkit-scrollbar {
+    display: none;
+}
+
+.top{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, rgb(255, 144, 0), rgb(255, 80, 0)) center center / cover no-repeat;
+}
+.topLeft{
+    width: 200px;
+}
+.topLeft p{
+    position: relative;
+    color: rgba(255,255,255,1);
+    font-size: 12px;
+    padding-left: 40px;
+}
+
+.topLeft .maijia{
+    font-size: 16px;
+    padding-top: 37px;
+    line-height: 10px;
+}
+
+.img{
+    width: 150px;
+    height: 100%;
+    float: right;
+    margin-top: -83px;
+    margin-right: 25px;
+}
+
+
+/* 物流信息 */
+.baoguo{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: #ffffff;
+}
+.baoguoImg{
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin: 15px 10px;
+}
+.baoguoWu{
+    float: left;
+    margin: 8px 0;
+}
+.baoguoWu span{
+    display:block;
+}
+.baoguoBq{ 
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 16px;
+}
+.glyphicon{
+    color: rgba(153,153,153,1);
+    font-size: 16px;
+
+}
+
+
+/* 收货地址 */
+.dizhi{
+    width: 100%;
+    height: 78px;
+    background: #ffffff;
+    margin-top: 1px;
+    position: relative;
+}
+.addimg{
+    width: 60px;
+    padding: 23px 10px;
+}
+.addimg img{
+    width: 32px;
+    height: 32px;
+}
+.address{
+    width: 320px;
+    height: 78px;
+    position: relative;
+    /* background: sandybrown; */
+    float: right;
+    margin-top: -78px;
+    color: #333333;
+    font-size: 15px;
+    line-height: 23px;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+/* 卖家店名 */
+.names{
+    width: 100%;
+    height: 44px;
+    background: #ffffff;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    padding-top: 15px;
+    margin-top: 10px;
+}
+.names img{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    float: left;
+}
+.names span{
+    margin-left: 8px;
+    float: left;
+
+}
+.bg{
+    float: left;
+}
+
+.bg img{
+    width: 14px;
+    height: 14px;
+}
+
+
+/* 商品信息 */
+.shangpin{
+    width: 100%;
+    height: 102px;
+    background: #ffffff;
+    padding: 6px 10px;
+}
+
+.shangpinImg img{
+    width: 90px;
+    height: 90px;
+    background: sienna;
+    position: relative;
+    float: left;
+    border-radius: 5px;
+}
+
+.shangpinXin{
+    width: 200px;
+    height: 100px;
+    float: left;
+    margin: 0 7px;
+    color: rgba(5,27,40,1);
+
+}
+.shangpinXin span{
+    display: block;
+    font-size: 12px; 
+    margin: 5px 0;
+}
+.shangpinXin_a{
+    width: 200px;
+    height: 33px;
+    line-height: 18px;
+    display: -webkit-box;             /*将对象转为弹性盒模型展示*/
+    -webkit-box-orient: vertical;     /*设置弹性盒模型子元素的排列方式*/
+    -webkit-line-clamp: 2;            /*限制文本行数*/
+    overflow: hidden;                 /*超出隐藏*/
+    margin: 0;
+}
+.shangpinXin_b{
+    width: 85px;
+    color: #FF5306;
+    background-color: #FFF1EC;
+    border-radius: 3px;
+}
+.shangpinJiage{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    float: right;
+}
+.shangpinJiage span{
+    display:block;
+    color: rgba(61,66,68,1);
+    font-size: 14px;
+    text-align: right;
+}
+
+
+/* 退换 */
+.tuihuan{
+    width: 100%;
+    height: 44px;
+    background: #ffffff;
+}
+
+.tuihuan_a{
+    width: 75px;
+    height: 28px;
+    position: relative;
+    color: #666666;
+    font-size: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 13.5px;
+    text-align: center;
+    float: right;
+    line-height: 26px;
+    margin-right: 10px;
+}
+
+
+/* 保险服务 */
+.baoxian{
+    width: 100%;
+    height: 180px;
+    position: relative;
+    padding: 0px 10px;
+    background: #ffffff;
+}
+
+.baoxianFu{
+    height: 32px;
+    line-height: 35px;
+    color: rgba(5,27,40,1);
+    font-size: 13px;
+}
+
+.baoxianXq{
+    height: 137px;
+    position: relative;
+    padding-top: 15px;
+    font-size: 12px;
+    color: rgba(61,66,68,1);
+    /* background: steelblue; */
+}
+
+.baoxianXq_a{
+    width: 320px;
+    /* background: chartreuse; */
+}
+.baoxianXq_a span{
+    display:block;
+    height: 14px;
+    margin: 3px 0;
+}
+
+.baoxianXq_b{
+    right: 0;
+    position: absolute;
+    margin-top: -38px;
+    text-align: right;
+}
+.baoxianXq_b span{
+    display:block;
+    height: 14px;
+    margin: 3px 0;
+}
+
+.baoxianXq_c{
+    width: 100%;
+    text-align: right;
+    height: 14px;
+    margin: 4px 0;
+}
+
+.baoxianXq_i{
+    position: absolute;
+    right: 0;
+}
+
+/* .shangpinJiage span:nth-child(2){
+    float: right;
+} */
+
+
+/* 联系方式 */
+.bottom{
+    width: 100%;
+    height: 48px;
+    position: relative;
+    background: #ffffff;
+    margin-top: 10px;
+}
+
+.bottom_a{
+    width: 50%;
+    height: 48px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/* 底部 */
+.guding{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 10;
+}
+
+.guding_a{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: 60px;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(61,66,68,1);
+    font-size: 13px;
+}
+.guding_b{
+    width: 265px;
+    height: 50px;
+    position: fixed;
+    padding-right: 10px;
+    bottom: 0;
+    right: 0;
+}
+.guding_b span{
+    width: 75px;
+    height: 28px;
+    margin-left: 10px;
+    border:1px solid #CCCCCC;
+    border-radius: 13.5px;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-top: 12px;
+    line-height: 27px;
+    font-size: 12px;
+    color: #666666;
+}
+
+#btn{
+    border: 1px solid #ff5500;
+    border-radius: 13.5px;
+    color: #ff5500;
+}
